@@ -1,0 +1,17 @@
+<h1>Lista de usuários</h1>
+<table *ngIf="Resposta">
+    <thead>
+        <td>Nome</td>
+        <td>Sobrenome</td>
+        <td>...</td>
+        <td>...</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Usuarios of Resposta.data">
+            <td>{{Usuarios.first_name}}</td>
+            <td>{{Usuarios.last_name}}</td>
+            <td><a routerLink="/usuarios/update/{{Usuarios.id}}">Editar</a></td>
+            <td><a routerLink="/usuarios/delete/{{Usuarios.id}}">Deletar</a></td>
+        </tr>
+    </tbody>
+</table>

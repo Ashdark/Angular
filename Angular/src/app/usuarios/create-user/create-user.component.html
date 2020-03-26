@@ -1,0 +1,22 @@
+<h1>Criar usuários</h1>
+<div>
+    <label>Nome:
+        <input placeholder="Insira um nome" [(ngModel)]="request.name">
+    </label>
+    <br>
+    <label>Profissão:
+        <input placeholder="Insira uma profissão"[(ngModel)]="request.job">
+    </label>
+    <br>
+    <button (click)="save()">Criar</button>
+</div>
+
+<br><br>
+
+<div *ngIf="response">
+    <h3>Usuario criado</h3>
+    <label>Nome: {{response.name}}</label><br>
+    <label>Profissão: {{response.job}}</label><br>
+    <label>ID: {{response.id}}</label><br>
+    <label>Data de criação: {{response.createdAt}}</label>
+</div>

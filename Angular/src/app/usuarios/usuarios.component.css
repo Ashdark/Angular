@@ -1,0 +1,9 @@
+table{
+    width: 100%;
+}
+thead{
+    background-color: blue;
+}
+tbody{
+    background-color: yellow;
+}
